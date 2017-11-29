@@ -1,7 +1,6 @@
 spring xml配置标签详解
 <!-- 指定类的名称 在对bean进行定义时，除了使用id属性来指定名称之外，为了提供多个名称，可以使用alias标签来指定。 --> 
 <alias name="" alias=""/>	
-
 <!-- applicationContext.xml文件中使用import的方式导入有模块配置文件 -->	
 <import resource=""/>	
 
