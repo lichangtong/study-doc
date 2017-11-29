@@ -1,56 +1,61 @@
 1,git reset --hard commit_id 
-eg£º
+egï¼š
    git reset --hard c613a9ac36723a8ed4a830734733335cef4980a3
 
 
-2,Ôİ´æ ¨C git add
-eg£º
- Ö»ÓĞÒ»¸öÎÄ¼ş
+2,æš‚å­˜ â€“ git add
+egï¼š
+ åªæœ‰ä¸€ä¸ªæ–‡ä»¶
  git add hello.txt
 
- ĞèÒªÌá½»Ä¿Â¼ÏÂµÄËùÓĞÄÚÈİ
+ éœ€è¦æäº¤ç›®å½•ä¸‹çš„æ‰€æœ‰å†…å®¹
  git add -A
 
 
 
-3£¬ ¼ì²é×´Ì¬ ¨C git status
-    ·Ç³£ÖØÒªµÄÃüÁî£¬Ëü»á¸æËßÎÒÃÇ´´¿âµÄµ±Ç°×´Ì¬£ºÊÇ·ñÎª×îĞÂ´úÂë£¬ÓĞÊ²Ã´¸üĞÂµÈµÈ
+3ï¼Œ æ£€æŸ¥çŠ¶æ€ â€“ git status
+    éå¸¸é‡è¦çš„å‘½ä»¤ï¼Œå®ƒä¼šå‘Šè¯‰æˆ‘ä»¬åˆ›åº“çš„å½“å‰çŠ¶æ€ï¼šæ˜¯å¦ä¸ºæœ€æ–°ä»£ç ï¼Œæœ‰ä»€ä¹ˆæ›´æ–°ç­‰ç­‰
 
-4£¬Ìá½» ¨C git commit
+4ï¼Œæäº¤ â€“ git commit
 eg:
 git commit -m "Initial commit."
 
-5, Á´½ÓÔ¶¶Ë²Ö¿â git remote add
+5, é“¾æ¥è¿œç«¯ä»“åº“ git remote add
 
 git remote add origin https://github.com/tutorialzine/awesome-project.git
-Ò»¸öÏîÄ¿¿ÉÒÔÍ¬Ê±ÓµÓĞºÃ¼¸¸öÔ¶¶Ë²Ö¿âÎªÁËÄÜ¹»Çø·Ö£¬Í¨³£»áÆğ²»Í¬µÄÃû×Ö¡£Í¨³£Ö÷Ô¶¶Ë²Ö¿â±»³ÆÎªorigin¡£
+ä¸€ä¸ªé¡¹ç›®å¯ä»¥åŒæ—¶æ‹¥æœ‰å¥½å‡ ä¸ªè¿œç«¯ä»“åº“ä¸ºäº†èƒ½å¤ŸåŒºåˆ†ï¼Œé€šå¸¸ä¼šèµ·ä¸åŒçš„åå­—ã€‚é€šå¸¸ä¸»è¿œç«¯ä»“åº“è¢«ç§°ä¸ºoriginã€‚
 
-6, ÉÏ´«µ½·şÎñÆ÷ ¨C git push 
-git pushÃüÁî»áÓĞÁ½¸ö²ÎÊı£¬Ô¶¶Ë²Ö¿âµÄÃû×Ö£¬ÒÔ¼°·ÖÖ§µÄÃû×Ö
+6, ä¸Šä¼ åˆ°æœåŠ¡å™¨ â€“ git push 
+git pushå‘½ä»¤ä¼šæœ‰ä¸¤ä¸ªå‚æ•°ï¼Œè¿œç«¯ä»“åº“çš„åå­—ï¼Œä»¥åŠåˆ†æ”¯çš„åå­—
+
+å…³è”è¿œç¨‹åˆ†æ”¯
+ git remote add origin https://github.com/lichangtong/study-doc.git
+ git push -u  origin master
+git push -u origin master ä¸Šé¢å‘½ä»¤å°†æœ¬åœ°çš„masteråˆ†æ”¯æ¨é€åˆ°originä¸»æœºï¼ŒåŒæ—¶æŒ‡å®šoriginä¸ºé»˜è®¤ä¸»æœºï¼Œåé¢å°±å¯ä»¥ä¸åŠ ä»»ä½•å‚æ•°ä½¿ç”¨git pushäº†
 
 eg:
 git push origin master
 
 
-7,¿ËÂ¡²Ö¿â ¨C git clone 
-±¾µØÒ²»á´´½¨Ò»¸öĞÂµÄ²Ö¿â£¬²¢×Ô¶¯½«githubÉÏµÄ·ÖÖ§ÉèÎªÔ¶¶Ë·ÖÖ§¡£
-eg£º
+7,å…‹éš†ä»“åº“ â€“ git clone 
+æœ¬åœ°ä¹Ÿä¼šåˆ›å»ºä¸€ä¸ªæ–°çš„ä»“åº“ï¼Œå¹¶è‡ªåŠ¨å°†githubä¸Šçš„åˆ†æ”¯è®¾ä¸ºè¿œç«¯åˆ†æ”¯ã€‚
+egï¼š
 git clone https://github.com/tutorialzine/awesome-project.git
 
-8,´Ó·şÎñÆ÷ÉÏÀ­È¡´úÂë ¨C git pull 
-Èç¹ûÄã¸üĞÂÁË´úÂëµ½²Ö¿âÉÏ£¬ÆäËûÈË¿ÉÒÔÍ¨¹ıgit pullÃüÁîÀ­È¡ÄãµÄ±ä¶¯
+8,ä»æœåŠ¡å™¨ä¸Šæ‹‰å–ä»£ç  â€“ git pull 
+å¦‚æœä½ æ›´æ–°äº†ä»£ç åˆ°ä»“åº“ä¸Šï¼Œå…¶ä»–äººå¯ä»¥é€šè¿‡git pullå‘½ä»¤æ‹‰å–ä½ çš„å˜åŠ¨
 eg:
 git pull origin master
 
-9,´´½¨ĞÂ·ÖÖ§ ¨C git branch 
-Ã¿Ò»¸ö²Ö¿âµÄÄ¬ÈÏ·ÖÖ§¶¼½Ğmaster, ´´½¨ĞÂ·ÖÖ§¿ÉÒÔÕâÑù
-´´½¨ÁËÒ»¸öÃûÎªamazing_new_featureµÄĞÂ·ÖÖ§£¬Ëü¸úµ±Ç°·ÖÖ§Í¬Ò»Æğµã
+9,åˆ›å»ºæ–°åˆ†æ”¯ â€“ git branch 
+æ¯ä¸€ä¸ªä»“åº“çš„é»˜è®¤åˆ†æ”¯éƒ½å«master, åˆ›å»ºæ–°åˆ†æ”¯å¯ä»¥è¿™æ ·
+åˆ›å»ºäº†ä¸€ä¸ªåä¸ºamazing_new_featureçš„æ–°åˆ†æ”¯ï¼Œå®ƒè·Ÿå½“å‰åˆ†æ”¯åŒä¸€èµ·ç‚¹
 eg:
 git branch amazing_new_feature
 
-10,ÇĞ»»·ÖÖ§ ¨C git checkout 
-µ¥¶ÀÊ¹ÓÃgit branch£¬¿ÉÒÔ²é¿´·ÖÖ§×´Ì¬£º
-* ºÅ±íÊ¾µ±Ç°»îÔ¾·ÖÖ§Îªmaster£¬Ê¹ÓÃgit checkoutÇĞ»»·ÖÖ§
+10,åˆ‡æ¢åˆ†æ”¯ â€“ git checkout 
+å•ç‹¬ä½¿ç”¨git branchï¼Œå¯ä»¥æŸ¥çœ‹åˆ†æ”¯çŠ¶æ€ï¼š
+* å·è¡¨ç¤ºå½“å‰æ´»è·ƒåˆ†æ”¯ä¸ºmasterï¼Œä½¿ç”¨git checkoutåˆ‡æ¢åˆ†æ”¯
 eg:
 git branch
 
@@ -58,54 +63,54 @@ result:
   amazing_new_feature
 * master
 
-11,ÇĞ»»·ÖÖ§ ¨C git checkout
+11,åˆ‡æ¢åˆ†æ”¯ â€“ git checkout
 
-eg£º
+egï¼š
 git checkout amazing_new_feature
 
 
-12£¬ºÏ²¢·ÖÖ§ ¨C git merge
+12ï¼Œåˆå¹¶åˆ†æ”¯ â€“ git merge
 
-ÎÒÃÇµÄ amazing_new_feature ·ÖÖ§µÄÈÎÎñÊÇÔö¼ÓÒ»¸öfeatuer.txt¡£ÎÒÃÇÀ´´´½¨£¬Ìí¼Óµ½Ôİ´æÇø£¬Ìá½»¡£
+æˆ‘ä»¬çš„ amazing_new_feature åˆ†æ”¯çš„ä»»åŠ¡æ˜¯å¢åŠ ä¸€ä¸ªfeatuer.txtã€‚æˆ‘ä»¬æ¥åˆ›å»ºï¼Œæ·»åŠ åˆ°æš‚å­˜åŒºï¼Œæäº¤ã€‚
 
 $ git add feature.txt
 $ git commit -m "New feature complete."
 
-ĞÂ·ÖÖ§ÈÎÎñÍê³ÉÁË£¬»Øµ½master·ÖÖ§
+æ–°åˆ†æ”¯ä»»åŠ¡å®Œæˆäº†ï¼Œå›åˆ°masteråˆ†æ”¯
 
 $ git checkout master
-ºÏ²¢£º
+åˆå¹¶ï¼š
 eg:
 git merge amazing_new_feature
 
 
-É¾³ı·ÖÖ§£º
+åˆ é™¤åˆ†æ”¯ï¼š
 git branch -d amazing_new_feature
 
-13£¬ git log Ã¿´ÎÌá½»¶¼ÓĞÒ»¸öÎ¨Ò»id£¬²é¿´ËùÓĞÌá½»ºÍËûÃÇµÄid£¬¿ÉÒÔÊ¹ÓÃ git log
+13ï¼Œ git log æ¯æ¬¡æäº¤éƒ½æœ‰ä¸€ä¸ªå”¯ä¸€idï¼ŒæŸ¥çœ‹æ‰€æœ‰æäº¤å’Œä»–ä»¬çš„idï¼Œå¯ä»¥ä½¿ç”¨ git log
 
-14£¬²é¿´Ä³Ò»´ÎÌá½»¸üĞÂÁËÊ²Ã´£¬Ê¹ÓÃ git show:
+14ï¼ŒæŸ¥çœ‹æŸä¸€æ¬¡æäº¤æ›´æ–°äº†ä»€ä¹ˆï¼Œä½¿ç”¨ git show:
 eg:
 git show commit_id
 
-15: ²é¿´Á½´ÎÌá½»µÄ²»Í¬£¬¿ÉÒÔÊ¹ÓÃgit diff [commit-from]..[commit-to] Óï·¨
+15: æŸ¥çœ‹ä¸¤æ¬¡æäº¤çš„ä¸åŒï¼Œå¯ä»¥ä½¿ç”¨git diff [commit-from]..[commit-to] è¯­æ³•
 eg:
 git diff 09bd8cc..ba25c0ff
 
 
 16,
-»Ø¹öÄ³¸öÎÄ¼şµ½Ö®Ç°µÄ°æ±¾
-git ÔÊĞíÎÒÃÇ½«Ä³¸öÌØ¶¨µÄÎÄ¼ş»Ø¹öµ½ÌØ¶¨µÄÌá½»£¬Ê¹ÓÃµÄÒ²ÊÇ git checkout
-eg£º git checkout commit_id ¡¾ÎÄ¼ş¡¿
+å›æ»šæŸä¸ªæ–‡ä»¶åˆ°ä¹‹å‰çš„ç‰ˆæœ¬
+git å…è®¸æˆ‘ä»¬å°†æŸä¸ªç‰¹å®šçš„æ–‡ä»¶å›æ»šåˆ°ç‰¹å®šçš„æäº¤ï¼Œä½¿ç”¨çš„ä¹Ÿæ˜¯ git checkout
+egï¼š git checkout commit_id ã€æ–‡ä»¶ã€‘
 git checkout 09bd8cc1 hello.txt
 
-17£¬git revert HEAD »Ø¹öÌá½»
+17ï¼Œgit revert HEAD å›æ»šæäº¤
 
-»ì¹öÌá½»Ê±£¬·¢Éú³åÍ»ÊÇ·Ç³£Æµ·±µÄ¡£µ±ÎÄ¼ş±»ºóÃæµÄÌá½»ĞŞ¸ÄÁËÒÔºó£¬git²»ÄÜÕıÈ·»Ø¹ö
+æ··æ»šæäº¤æ—¶ï¼Œå‘ç”Ÿå†²çªæ˜¯éå¸¸é¢‘ç¹çš„ã€‚å½“æ–‡ä»¶è¢«åé¢çš„æäº¤ä¿®æ”¹äº†ä»¥åï¼Œgitä¸èƒ½æ­£ç¡®å›æ»š
 
-×îĞÂµÄÒ»´ÎÌá½»±ğÃûÒ²½ĞHEAD 
+æœ€æ–°çš„ä¸€æ¬¡æäº¤åˆ«åä¹Ÿå«HEAD 
 eg:
 git revert HEAD
 
-ÆäËûÌá½»¿ÉÒÔÊ¹ÓÃcommit_id
+å…¶ä»–æäº¤å¯ä»¥ä½¿ç”¨commit_id
 git revert b10cc123
