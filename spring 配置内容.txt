@@ -13,6 +13,28 @@ PersistenceAnnotationBeanPostProcessor 以及 RequiredAnnotationBeanPostProcessor 
 注册这4个 BeanPostProcessor的作用，就是为了你的系统能够识别相应的注解。 -->
 <context:annotation-config></context:annotation-config>
 
+我们一般都会配置扫描包路径：<context: component-scan base-package=com.xxx.xxx />
+其实，给配置已经包含了自动注入上述Processor的功能，所以，配置了包扫描之后，<context annotation-config />就可以移除了。
+
+<context annotation-config />标签意义：
+该标签隐式的向Spring容器注册了：
+AutowiredAnnotationBeanPostProcessor   CommondAnnotationBeanPostProcessor
+PersistenceAnnotationBeanPostProcessor   RequiredAnnotationBeanPostProcessor这四个BeanPostProcessor.
+1.AutowiredAnnotationBeanPostProcessor:主要是使用@AutoWired注解时，必须提前向Spring容器注册这个BeanPostprocessor
+传统的配置方式：<bean class="org.springframework.beans.factory.annotation. AutowiredAnnotationBeanPostProcessor "/>
+2.CommondAnnotationBeanPostprocessor:主要是使用@Resource、@PostConstruct、@Predestory等注解时，必须提前向Spring容器注册。
+传统配置方式：<bean class="org.springframework.beans.factory.annotation.CommondAnnotationBeanPostprocessor"/>
+3.PersistenceAnnotationBeanPostProcessor :主要是使用@PersistenceContext注解时，必须提前向Spring容器注册。
+传统配置方式：<bean class="org.springframework.beans.factory.annotation.PersistenceAnnotationBeanPostProcessor"/>
+4.RequiredAnnotationBeanPostProcessor:主要是使用@Required注解时，必须提前向Spring容器注册。
+传统配置方式：<bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"/>
+一般来说，@Autowired注解比较常用，传统配置方式有点繁琐，而这种隐式配置方式就可以帮我们很容易的搞定。
+不过使用注解，我们一般都会配置扫描包路径：<context: component-scan base-package=com.xxx.xxx />
+其实，给配置已经包含了自动注入上述Processor的功能，所以，配置了包扫描之后，<context annotation-config />就可以移除了。
+
+
+
+
 <!-- Spring 2.5引入了更多典型化注解(stereotype annotations)： @Component、@Service和 @Controller。@Component是所有受Spring管理组件的通用形式； -->
 <context:component-scan base-package=""></context:component-scan>	
 
@@ -29,7 +51,21 @@ PersistenceAnnotationBeanPostProcessor 以及 RequiredAnnotationBeanPostProcessor 
 <!-- 需要在spring的配置文件里添加一句：<context:property-placeholder location="classpath:jdbc.properties"/> 即可，这里location值为参数配置文件的位置，参数配置文件通常放在src目录下，而参数配置文件的格式跟java通用的参数配置文件相同，即键值对的形式， -->
 <context:property-placeholder/>
 
-<!-- -->
+<!--主要是通过Spring管理AnnotationBeanConfigurerAspect切面，  具体的工作由该切面完成。 -->
+以User 为例，该User并没有配置在IOC理，但我想对其里面的一个UserDao进行依赖注入，其代码如下
+@Configurable(autowire = Autowire.BY_NAME, dependencyCheck = false)  
+public class User {  
+      private String UserName;  
+      ....  
+      private  UserDao userDao;  
+     ...  
+       
+      @Autowired  
+      public void setUserDao〔UserDao userDao〕{  
+             this.userDao=userDao.  
+     }  
+  
+} 
 <context:spring-configured>
 </context:spring-configured>
 
